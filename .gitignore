@@ -25,6 +25,8 @@ precompiled
 /.project
 project/project
 project/target
+project/.sbtserver*
+
 /RUNNING_PID
 server.pid
 /.settings
@@ -35,3 +37,5 @@ tmp
 .idea_modules
 bin
 build.sbt
+
+activator.*
