@@ -17,16 +17,15 @@ object MicroServiceBuild extends Build with MicroService {
 private object AppDependencies {
   import play.core.PlayVersion
 
-  private val microserviceBootstrapVersion = "1.4.0"
+  private val microserviceBootstrapVersion = "2.0.0"
   private val playHealthVersion = "1.1.0"
-  private val playConfigVersion = "1.2.0"
-  private val hmrcTestVersion = "1.2.0"
-  private val playReactivemongoVersion = "4.1.0"
-  private val simpleReactivemongoVersion = "3.1.2"
+  private val playConfigVersion = "2.0.0"
+  private val hmrcTestVersion = "1.4.0"
+  private val playReactivemongoVersion = "4.3.0"
+  
 
   val compile = Seq(
     "uk.gov.hmrc" %% "play-reactivemongo" % playReactivemongoVersion,
-    "uk.gov.hmrc" %% "simple-reactivemongo" % simpleReactivemongoVersion,
     "uk.gov.hmrc" %% "microservice-bootstrap" % microserviceBootstrapVersion,
     "uk.gov.hmrc" %% "play-health" % playHealthVersion,
     "uk.gov.hmrc" %% "play-config" % playConfigVersion,
@@ -36,8 +35,8 @@ private object AppDependencies {
   abstract class TestDependencies(scope: String) {
     lazy val test : Seq[ModuleID] = Seq(
       "uk.gov.hmrc" %% "hmrctest" % hmrcTestVersion % scope,
-      "org.scalatest" %% "scalatest" % "2.2.2" % scope,
-      "org.pegdown" % "pegdown" % "1.4.2" % scope,
+      "org.scalatest" %% "scalatest" % "2.2.4" % scope,
+      "org.pegdown" % "pegdown" % "1.5.0" % scope,
       "com.typesafe.play" %% "play-test" % PlayVersion.current % scope
     )
   }
