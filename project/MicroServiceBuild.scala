@@ -21,7 +21,7 @@ private object AppDependencies {
   private val playHealthVersion = "1.1.0"
   private val playConfigVersion = "2.0.0"
   private val hmrcTestVersion = "1.4.0"
-  private val playReactivemongoVersion = "4.3.0"
+  private val playReactivemongoVersion = "4.3.2"
   
 
   val compile = Seq(
